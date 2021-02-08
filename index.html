@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База данных студентов</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-5">
+                <form id="filters">
+                    <h4 class="mb-3">Фильтры</h4>
+                    <div class="mb-3">
+                        <label for="FIO-filter" class="form-label">ФИО</label>
+                        <input type="text" class="form-control" id="FIO-filter">
+                    </div>
+                    <div class="mb-3">
+                        <label for="faculty-filter" class="form-label">Факультет</label>
+                        <input type="text" class="form-control" id="faculty-filter">
+                    </div>
+                    <div class="mb-3">
+                        <label for="start-learn-filter" class="form-label">Год начала обучения</label>
+                        <input type="number" class="form-control" id="start-learn-filter" min="2000" max="2021">
+                    </div>
+                    <div class="mb-3">
+                        <label for="end-learn-filter" class="form-label">Год окончания обучения</label>
+                        <input type="number" class="form-control" id="end-learn-filter">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="table-students">
+        <div class="row">
+            <div class="col-12">
+                <table class="table mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col">ФИО студента</th>
+                            <th scope="col">Факультет</th>
+                            <th scope="col">Дата рождения и возраст</th>
+                            <th scope="col">Годы обучения и номер курса</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-12 col-md-5">
+                <form id="form-students">
+                    <h4 class="mb-3">Форма добавления студента</h4>
+                    <div class="mb-3">
+                        <label for="surname" class="form-label">Введите фамилию</label>
+                        <input type="text" class="form-control" id="surname" name="фамилия">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Введите имя</label>
+                        <input type="text" class="form-control" id="name" name="имя">
+                    </div>
+                    <div class="mb-3">
+                        <label for="middle-name" class="form-label">Введите отчество</label>
+                        <input type="text" class="form-control" id="middle-name" name="отчество">
+                    </div>
+                    <div class="mb-3">
+                        <label for="DOB" class="form-label">Введите дату рождения</label>
+                        <input type="date" class="form-control" min="1900-01-01" id="DOB" name="дата рождения">
+                    </div>
+                    <div class="mb-3">
+                        <label for="start-learn" class="form-label">Введите год начала обучения</label>
+                        <input type="number" class="form-control" id="start-learn" min="2000" max="2021" placeholder="С 2000 г. по настоящий" name="год начала обучения">
+                    </div>
+                    <div class="mb-3">
+                        <label for="faculty" class="form-label">Введите факультет</label>
+                        <input type="text" class="form-control" id="faculty" name="факультет">
+                    </div>
+                    <p id="error-msg"></p>
+                    <button type="submit" class="btn btn-primary" id="btn-add-student">Добавить студента</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.table thead tr th {
+    cursor: pointer;
+}
+
+#error-msg {
+    color: red;
+    transition: 0.5s;
+}
